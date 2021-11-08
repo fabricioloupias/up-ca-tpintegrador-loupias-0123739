@@ -27,5 +27,10 @@ Servicio encargardo de asignar ips dinamicas dentro de un rango establecido. Par
 * Se instaló el cliente DHCP en las maquinas cliente 05 y 06
 * Se configuro en los clientes 05 y 06 para que reciban de este servicio las ip
 
+## File-server
+Servicio encargado de realizar backups de la carpeta /home del ciente 03
 
-
+* Se creo un script en /media/disco_backups/backup_home_cliente-03.sh el cual contiene la sentencia para realizar el backup de la carpeta /home del cliente 03
+* Se configuro sshpass para no necesitar el password ante cada ejecucion
+* Se instaló rsync para sincronizar el backup
+* Se creo la carpeta /media/disco_backups/logs en la que ante cada ejecucion del script se va a generar un archivo con el formato backup_home_cliente-03.sh_YYYY-mm-dd_HH-MM-SSZ.log guardando las salidas
